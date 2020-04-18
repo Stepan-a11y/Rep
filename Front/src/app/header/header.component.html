@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top">
+
+       <div class="container-fluid">
+
+       <a class="navbar-brand mr-4" [routerLink]="['/']"><h2>Belrepet.by</h2></a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+           data-target="#navbarResponsive">
+           <span class="navbar-toggler-icon"></span></button>
+
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav mx-auto">
+           <li class="nav-item ml-5">
+              <a class="nav-link ml-5" href="#">Репетиторы</a>
+           </li>
+           <li class="nav-item ml-5">
+              <a class="nav-link ml-5" href="#">Стать репетитором</a>
+           </li>
+           <li class="nav-item ml-5">
+              <a class="nav-link ml-5" href="#">Новости</a>
+           </li>
+           <li class="nav-item ml-5">
+              <a class="nav-link ml-5" href="#">О нас</a>
+           </li>
+           <li class="nav-item active ml-5">
+              <a class="nav-link ml-5" [routerLink]="['/reg']">Вход</a>
+           </li>
+         </ul>
+       </div>
+       </div>
+     </nav>

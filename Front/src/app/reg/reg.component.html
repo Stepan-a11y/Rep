@@ -1,0 +1,48 @@
+<div class="container">
+<h1 class="mt-4">Регистрация</h1>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-stud-tab" data-toggle="tab" href="#nav-stud" role="tab" aria-controls="nav-stud" aria-selected="true">Студент</a>
+      <a class="nav-item nav-link" id="nav-lect-tab" data-toggle="tab" href="#nav-lect" role="tab" aria-controls="nav-lect" aria-selected="false">Преподаватель</a>
+    </div>
+  </nav>
+
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-stud" role="tabpanel" aria-labelledby="nav-stud-tab">
+
+<form class="form-signin" (submit)="studRegisterClick()">
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control mt-3" placeholder="Введите имя">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control mt-3" placeholder="Введите фамилию" >
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="email" [(ngModel)]="email" name="email" class="form-control mt-3" placeholder="Введите email" >
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="text" [(ngModel)]="login" name="login" class="form-control mt-3" placeholder="Введите логин" >
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" [(ngModel)]="password" name="password" class="form-control mt-3" placeholder="Введите пароль" >
+  <button class="mt-3 btn btn-lg btn-primary btn-block " type="submit">Зарегистрироваться</button>
+</form>
+</div>
+<div class="tab-pane fade" id="nav-lect" role="tabpanel" aria-labelledby="nav-lect-tab">
+  <form class="form-signin" (submit)="lectRegisterClick()">
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="text" [(ngModel)]="firstName" name="firstName" class="form-control mt-3" placeholder="Введите имя">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="text" [(ngModel)]="lastName" name="lastName" class="form-control mt-3" placeholder="Введите фамилию" >
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="email" [(ngModel)]="email" name="email" class="form-control mt-3" placeholder="Введите email" >
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="text" [(ngModel)]="login" name="login" class="form-control mt-3" placeholder="Введите логин" >
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" [(ngModel)]="password" name="password" class="form-control mt-3" placeholder="Введите пароль" >
+    <input type="text" [(ngModel)]="subject" name="login" class="form-control mt-3" placeholder="Предмет преподавания" >
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="text" [(ngModel)]="stage" name="login" class="form-control mt-3" placeholder="Стаж преподавания" >
+    <label for="inputPassword" class="sr-only">Password</label>
+    <button class="mt-3 btn btn-lg btn-primary btn-block " type="submit">Зарегистрироваться</button>
+  </form>
+  </div>
+
+</div>
+</div>
