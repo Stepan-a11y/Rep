@@ -46,8 +46,8 @@ module.exports.AddStud = function(newStud, callback) {
    });
 };
 
-module.exports.compPass = function(passFromUser, userDBPass, callback) {
-   bcrypt.compare(passFromUser, userDBPass, (err, isMatch) => {
+module.exports.compPass = function(passFromStud, studDBPass, callback) {
+   bcrypt.compare(passFromStud, studDBPass, (err, isMatch) => {
      if(err) throw err;
      callback(null, isMatch);
    });

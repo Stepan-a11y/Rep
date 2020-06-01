@@ -5,9 +5,11 @@ const cors = require('cors');
 const passport = require('passport');
 const path = require('path');
 
+
+
 const set = require('./set/data');
 const pc = require('./routes/pc');
-
+const main = require('./routes/main');
 
 const rep = express();
 
@@ -33,6 +35,8 @@ mongoose.connection.on('error', (err) => {
 });
 
 rep.use('/pc', pc);
+rep.use('/main', main);
+
 
 rep.listen(port, ()=>{
   console.log("connected");

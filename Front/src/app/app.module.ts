@@ -13,9 +13,15 @@ import { FormsModule } from '@angular/forms';
 import { CheckFormService } from './check-form.service';
 import { AuthComponent } from './auth/auth.component';
 import { HttpModule } from '@angular/http';
+import { AuthService } from './auth.service';
+import { PerscabComponent } from './perscab/perscab.component';
+
+import { IsLoggedIn } from "./isLogged.guard";
 
 const appRoute: Routes = [
    {path: '', component: HomeComponent },
+    {path: 'auth', component: AuthComponent },
+    {path: 'perscab', component: PerscabComponent, canActivate: [IsLoggedIn] },
    {path: 'reg', component: RegComponent }
 ];
 
@@ -25,7 +31,8 @@ const appRoute: Routes = [
     HomeComponent,
     RegComponent,
     HeaderComponent,
-    AuthComponent
+    AuthComponent,
+    PerscabComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,7 @@ const appRoute: Routes = [
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CheckFormService, AuthService, IsLoggedIn],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
